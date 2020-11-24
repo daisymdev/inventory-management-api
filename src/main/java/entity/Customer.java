@@ -11,7 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
-import com.daisymdev.inventory-management-api.util.MembershipLevel;
+//import com.daisymdev.inventory-management-api.util.MembershipLevel;
 
 @Entity
 public class Customer {
@@ -19,7 +19,7 @@ public class Customer {
     private String firstName;
     private String lastName;
     private Address address;
-    private MembershipLevel level;
+    //private MembershipLevel level;
     private Set<Order> orders;
 
     @Id
@@ -62,13 +62,13 @@ public class Customer {
         this.address = address;
     }
 
-    public MembershipLevel getLevel() {
-        return level;
-    }
-
-    public void setLevel(MembershipLevel level) {
-        this.level = level;
-    }
+//    public MembershipLevel getLevel() {
+//        return level;
+//    }
+//
+//    public void setLevel(MembershipLevel level) {
+//        this.level = level;
+//    }
 
     @OneToMany(mappedBy = "customer")
     public Set<Order> getOrders() {
