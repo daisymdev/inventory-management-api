@@ -46,6 +46,10 @@ public class Product {
         return price;
     }
 
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "product_order",
         joinColumns = @JoinColumns(name = "orderId", referencedColumnName = "id"),
